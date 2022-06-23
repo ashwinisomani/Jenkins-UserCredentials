@@ -1,4 +1,4 @@
-curl -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=abc.123@edifecs.com
+curl -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=${env.email}
 --data-urlencode 'json={
   "": "0",
   "credentials": {
