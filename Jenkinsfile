@@ -1,9 +1,9 @@
   curl  http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=abc@edifecs.com
   verbosity=high
 
- json={
+ json => {
   "": "0",
-  "credentials": {
+  "credentials" => {
     "scope": "GLOBAL",
     "id": "identification",
     "username": "manu",
