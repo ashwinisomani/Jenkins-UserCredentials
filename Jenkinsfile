@@ -3,7 +3,7 @@
 
  json = {
   ":" "0",
-  "credentials" => {
+  "credentials" = {
     "scope": "GLOBAL",
     "id": "identification",
     "username": "manu",
