@@ -1,5 +1,5 @@
-CRUMB=$(curl -s 'http://user:token@jenkins_server:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
-curl -H $CRUMB -X POST 'http://user:token@jenkins_server:8080/credentials/store/system/domain/_/createCredentials' \
+CRUMB=$(curl -s 'http://localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+curl -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email= abc.123@edifecs.com
 --data-urlencode 'json={
   "": "0",
   "credentials": {
