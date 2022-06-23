@@ -1,6 +1,4 @@
-curl http://user:token@localhost:8080/job/JOB_NAME/buildWithParameters \
-  token=<myToken> 
-  email= abc.123@edifecs.com
+curl  http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=abc@edifecs.com
   verbosity=high
 --data-urlencode 'json={
   "": "0",
