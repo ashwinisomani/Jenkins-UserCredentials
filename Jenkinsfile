@@ -5,11 +5,11 @@
   ":" "0",
   "credentials" = {
     "scope" = "GLOBAL",
-    "id": "identification",
-    "username": "manu",
-    "password": "bar",
-    "description": "linda",
-    "$class": "com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl"
+    "id" =  "identification",
+    "username" = "manu",
+    "password"= "bar",
+    "description" = "linda",
+    "$class" = "com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl"
   }
 }
 
