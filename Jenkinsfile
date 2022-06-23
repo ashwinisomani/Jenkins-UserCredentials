@@ -1,6 +1,5 @@
-    curl http://user:token@localhost:8080/job/JOB_NAME/buildWithParameters \
-  --user USER:TOKEN \
-  --data email=123 --data verbosity=high
+curl http://user:token@localhost:8080/job/JOB_NAME/buildWithParameters \
+--data email=123 --data verbosity=high
 --data-urlencode 'json={
   "": "0",
   "credentials": {
