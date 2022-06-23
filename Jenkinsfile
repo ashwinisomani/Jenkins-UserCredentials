@@ -5,10 +5,10 @@
   ":" "0",
   "credentials" = {
     "scope" = "'{{GLOBAL}}'"
-    "id" =  "'{{ii.ssh_user}}'",
-    "username" = "manu",
-    "password"= "bar",
-    "description" = "linda",
+    "id" =  "'{{ii.ssh_user}}'"
+    "username" = "'{{ii.ssh_user}}'"
+    "password"= ""
+    "description" = "'{{ii.ssh_user}}'"
     "$class" = "com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl"
   }
 }
