@@ -1,4 +1,4 @@
-curl -H $CRUMB -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=${email}
+curl -H $CRUMB -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email="abc@edifecs.com"
 --data-urlencode 'json={
   "": "0",
   "credentials": {
