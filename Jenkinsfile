@@ -4,7 +4,7 @@
 json={
   ":" "0",
   "credentials": {
-    "scope": "GLOBAL",
+    "scope" = "'{{GLOBAL}}'"
     "id": "'{{ii.ssh_user}}'",
     "username": "'{{ii.ssh_user}}'",
     "password": "",
