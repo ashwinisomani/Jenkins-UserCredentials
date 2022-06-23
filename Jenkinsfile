@@ -9,6 +9,6 @@ json={
     "username" = "'{{ii.ssh_user}}'"
     "password" = ""
     "description" = "'{{ii.ssh_user}}'"
-    "stapler-class" = "com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey"
+    "stapler-class" = "'{{com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey}}'"
   }
 }
