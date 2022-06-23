@@ -5,7 +5,7 @@
   ":" "0",
   "credentials" = {
     "scope" = "'{{GLOBAL}}'"
-    "id" =  "identification",
+    "id" =  "'{{ii.ssh_user}}'",
     "username" = "manu",
     "password"= "bar",
     "description" = "linda",
