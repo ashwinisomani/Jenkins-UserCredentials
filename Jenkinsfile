@@ -1,5 +1,6 @@
-CRUMB=$(curl -s 'http://user:token@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)') 
+CRUMB=$(curl -s 'http://asomani:Freebird$29@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)') 
 curl -H $CRUMB -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=abc@edifecs.com
+  
   verbosity=high
 
 json={
