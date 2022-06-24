@@ -2,7 +2,7 @@
 import json
 import requests
 
-def main():
+
     data = {
         'credentials': {
             'scope': "GLOBAL",
