@@ -1,24 +1,14 @@
+#CSRF protection support
+function is_crumbs_enabled() {
+  use_crumbs="$( $CURL -s ${JENKINS_WEB}/api/json?pretty=true 2> /dev/null | python -c 'import sys,json;exec "try:\n  j=json.load(sys.stdin)\n  print str(j[\"useCrumbs\"]).lower()\nexcept:\n  pass"' )"
+  if [ "${use_crumbs}" = "true" ]; then
+    return 0
+  fi
+  return 1
+}
 
-import json
-import requests
+#CSRF protection support
+function get_crumb() {
+  ${CURL} -s ${JENKINS_WEB}/crumbIssuer/api/json | python -c 'import sys,json;j=json.load(sys.stdin);print j["crumbRequestField"] + "=" + j["crumb"]'
+}
 
-
-    data = {
-        'credentials': {
-            'scope': "GLOBAL",
-            'username': "jenkins",
-            'privateKeySource': {
-                'privateKey': "-----BEGIN RSA PRIVATE KEY-----\nX\n-----END RSA PRIVATE KEY-----",
-                'stapler-class': "com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey$DirectEntryPrivateKeySource"
-            },
-            'stapler-class': "com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey"
-        }
-    }
-
-    payload = {
-        'json': json.dumps(data),
-        'Submit': "OK",
-    }
-    r = requests.post("http://%s:%d/credential-store/domain/_/createCredentials" % (HOSTNAME, 8080), data=payload)
-    if r.status_code != requests.codes.ok:
-        print r.text
