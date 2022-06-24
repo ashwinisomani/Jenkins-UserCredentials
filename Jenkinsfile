@@ -1,5 +1,6 @@
 
-CRUMB=`curl -u $asomani:$Freebird$29 'http://localhost:8080/crumbIssuer/api(//crumbRequestField,":",//crumb)'`
+const crumbIssuer = await jenkinsAxios.get('/crumbIssuer/api/json');
+CRUMB=$(curl --insecure --silent --user asomani:Freebird$29 localhost:8080/crumbIssuer/api/xml?xpath=concat\(//crumbRequestField,%22":"%22,//crumb\))
 curl -H $CRUMB -X POST http://localhost:8080/job/AutomatedUserCreation/buildWithParameters?token=<myToken> -F email=abc@edifecs.com
   
   verbosity=high
