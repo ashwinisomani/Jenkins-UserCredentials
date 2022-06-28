@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Run') {
             steps {
-                sh "echo $JENKINS_USER"
-                sh "echo $JENKINS_USER_PWD"
+             echo ${USER_PASSWORD}
+             echo ${env:USER_PASSWORD}
             }
         }
     }
